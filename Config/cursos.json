@@ -1,0 +1,713 @@
+{
+	"cursos": [
+		{
+			"nome": "Ciência da Computação (Matutino)",
+			"turno": "Matutino",
+			"dia_inicio": "Segunda",
+			"dia_fim": "Sexta",
+			"disciplinas": [
+				{
+					"nome": "Programação Orientada a Objetos",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Alexandre Perin de Souza"
+				}, {
+					"nome": "Arquitetura e Organização de Computadores",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Robson Costa"
+				}, {
+					"nome": "Linguagens e Paradigmas de Programação",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Wilson Castello Branco Neto"
+				}, {
+					"nome": "Álgebra Linear e Geometria Analítica",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Vilma Gisele Karsburg"
+				}, {
+					"nome": "Introdução à Redes de Computadores",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Robson Costa"
+				}, {
+					"nome": "Grafos",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Wilson Castello Branco Neto"
+				}, {
+					"nome": "Fundamentos de Bancos de Dados",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Fabio Aiub Sperotto"
+				}, {
+					"nome": "Teoria da Computação",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Wilson Castello Branco Neto"
+				}, {
+					"nome": "Teoria da Computação",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Alexandre Perin de Souza"
+				}, {
+					"nome": "Introdução à Engenharia de Software",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Alexandre Perin de Souza"
+				}, {
+					"nome": "Cálculo Numérico",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Vilma Gisele Karsburg"
+				}, {
+					"nome": "Informática e Sociedade",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Fernando Weber Albiero"
+				}, {
+					"nome": "Computação Gráfica",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Vilson Heck Junior"
+				}, {
+					"nome": "Segurança Computacional",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Robson Costa"
+				}, {
+					"nome": "Eletiva I",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Carlos Andres Ferrero"
+				}, {
+					"nome": "Inteligência Artificial",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Wilson Castello Branco Neto"
+				}, {
+					"nome": "Sistemas Distribuídos",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Robson Costa"
+				}, {
+					"nome": "Trabalho de Conclusão de Curso",
+					"fase": 8,
+					"carga_horaria": 160,
+					"professor": "Alexandre Perin de Souza"
+				}, {
+					"nome": "Eletiva III",
+					"fase": 8,
+					"carga_horaria": 80,
+					"professor": "Vilson Heck Junior"
+				}, {
+					"nome": "Eletiva IV",
+					"fase": 8,
+					"carga_horaria": 80,
+					"professor": "Fernando Weber Albiero"
+				}, {
+					"nome": "Gerência de Projetos",
+					"fase": 8,
+					"carga_horaria": 80,
+					"professor": "Leonardo Bravo Estacio"
+				}
+			]
+		}, {
+			"nome": "Engenharia Mecânica (Matutino)",
+			"turno": "Matutino",
+			"dia_inicio": "Segunda",
+			"dia_fim": "Sexta",
+			"disciplinas": [
+				{
+					"nome": "Cálculo II",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Ailton Durigon"
+				}, {
+					"nome": "Álgebra Linear",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Juliana Mercedes Rheinheimer"
+				}, {
+					"nome": "Física I",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Eliana Fernandes Borragini"
+				}, {
+					"nome": "Estatística e Probabilidade",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Vilma Gisele Karsburg"
+				}, {
+					"nome": "Desenho Técnico II",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Natalia Madalena Boelter"
+				}, {
+					"nome": "Comunicação e Expressão",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Paula Clarice Santos G. de Jesus"
+				}, {
+					"nome": "Cálculo IV",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Ailton Durigon"
+				}, {
+					"nome": "Física III",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Eliana Fernandes Borragini"
+				}, {
+					"nome": "Termodinâmica",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Matheus Fontanelle Pereira"
+				}, {
+					"nome": "Mecânica dos Sólidos",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Anderson Luis Garcia Correia"
+				}, {
+					"nome": "Ciência e Tecnologia dos Materiais",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Rafael Gustavo Schreiber"
+				}, {
+					"nome": "Metrologia",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Ricardo Teran Muhl"
+				}, {
+					"nome": "Transferência de Calor",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Matheus Fontanelle Pereira"
+				}, {
+					"nome": "Mecanismos",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Anderson Luis Garcia Correia"
+				}, {
+					"nome": "Elementos de Máquina I",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Rafael Gustavo Schreiber"
+				}, {
+					"nome": "Materiais de Construção Mecânica",
+					"fase": 6,
+					"carga_horaria": 40,
+					"professor": "Cláudio Marques Schaeffer"
+				}, {
+					"nome": "Usinagem",
+					"fase": 6,
+					"carga_horaria": 40,
+					"professor": "Ariton Araldi"
+				}, {
+					"nome": "Atividades de Extensão II",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Fernando da Silva Osório"
+				}, {
+					"nome": "Máquinas Térmicas",
+					"fase": 8,
+					"carga_horaria": 80,
+					"professor": "Matheus Fontanelle Pereira"
+				}, {
+					"nome": "Conformação e Fundição",
+					"fase": 8,
+					"carga_horaria": 40,
+					"professor": "Rafael Gustavo Schreiber"
+				}, {
+					"nome": "Conformação e Fundição",
+					"fase": 8,
+					"carga_horaria": 40,
+					"professor": "Cláudio Marques Schaeffer"
+				}, {
+					"nome": "Eletiva I",
+					"fase": 8,
+					"carga_horaria": 40,
+					"professor": "Diego Augusto Gonzaga"
+				}, {
+					"nome": "Eletiva II",
+					"fase": 8,
+					"carga_horaria": 40,
+					"professor": "Rogério da Silva"
+				}, {
+					"nome": "Manufatura Auxiliada por Computador",
+					"fase": 8,
+					"carga_horaria": 40,
+					"professor": "Ariton Araldi"
+				}, {
+					"nome": "Gestão de Qualidade e Produção",
+					"fase": 8,
+					"carga_horaria": 40,
+					"professor": "Larisse Kupski"
+				}, {
+					"nome": "Atividades de Extensão III",
+					"fase": 8,
+					"carga_horaria": 80,
+					"professor": "Natalia Madalena Boelter"
+				}, {
+					"nome": "Trabalho de Conclusão de Curso II",
+					"fase": 10,
+					"carga_horaria": 80,
+					"professor": "Matheus Fontanelle Pereira"
+				}, {
+					"nome": "Atividades de Extensão V",
+					"fase": 10,
+					"carga_horaria": 80,
+					"professor": "Fernando da Silva Osório"
+				}
+			]
+		}, {
+			"nome": "Engenharia Química (Matutino)",
+			"turno": "Matutino",
+			"dia_inicio": "Segunda",
+			"dia_fim": "Sexta",
+			"disciplinas": [
+				{
+					"nome": "Álgebra Linear",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Geovani Raulino"
+				}, {
+					"nome": "Cálculo I",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Ailton Durigon"
+				}, {
+					"nome": "Desenho Técnico",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Ricardo Teran Muhl"
+				}, {
+					"nome": "Física I",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Eliana Fernandes Borragini"
+				}, {
+					"nome": "Metodologia da Pesquisa",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Taiana Maria Deboni"
+				}, {
+					"nome": "Química Orgânica I",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Carolina Berger"
+				}, {
+					"nome": "Atividades de Extensão I",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Gustavo Henrique S. Flores Ponce"
+				}, {
+					"nome": "Administração para Engenharia",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Thiago Meneghel Rodrigues"
+				}, {
+					"nome": "Cálculo III",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Geovani Raulino"
+				}, {
+					"nome": "Ciência e Tecnologia dos Materiais",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Jaqueline Suave"
+				}, {
+					"nome": "Estatística II",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Gustavo Henrique S. Flores Ponce"
+				}, {
+					"nome": "Físico-química II",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Marco Aurélio Woehl"
+				}, {
+					"nome": "Informática e Programação",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Eder Corvalão"
+				}, {
+					"nome": "Química Analítica II",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Haroldo Gregório de Oliveira"
+				}, {
+					"nome": "Projeto Integrador II",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Haroldo Gregório de Oliveira"
+				}, {
+					"nome": "Cinética Química",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Jaqueline Suave"
+				}, {
+					"nome": "Cálculo Numérico",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Vilma Gisele Karsburg"
+				}, {
+					"nome": "Fenômenos de Transporte I",
+					"fase": 6,
+					"carga_horaria": 80,
+					"professor": "Gustavo Henrique S. Flores Ponce"
+				}, {
+					"nome": "Segurança na Indústria",
+					"fase": 6,
+					"carga_horaria": 40,
+					"professor": "Michael Ramos Nunes"
+				}, {
+					"nome": "Termodinâmica I",
+					"fase": 6,
+					"carga_horaria": 40,
+					"professor": "Diego Bittencourt Machado"
+				}
+			]
+		}, {
+			"nome": "Técnico em Informática para Internet (Vespertino – aula de 3a a 6a)",
+			"turno": "Vespertino",
+			"dia_inicio": "Terça",
+			"dia_fim": "Sexta",
+			"disciplinas": [
+				{
+					"nome": "Banco de Dados",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Fabio Aiub Sperotto"
+				}, {
+					"nome": "Comunicação e Expressão",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "Paula Clarice Santos G. de Jesus"
+				}, {
+					"nome": "Introdução à Programação",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "Wilson Castello Branco Neto"
+				}, {
+					"nome": "Introdução à Programação",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Carlos Andres Ferrero"
+				}, {
+					"nome": "Sistemas e Conectividade",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "Robson Costa"
+				}, {
+					"nome": "Sistemas e Conectividade",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "João Augusto da Silva Bueno"
+				}, {
+					"nome": "Desenvolvimento de Sistemas Web I",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Leonardo Bravo Estacio"
+				}, {
+					"nome": "Desenvolvimento de Sistemas Web I",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Fabio Aiub Sperotto"
+				}, {
+					"nome": "Segurança da Informação",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Robson Costa"
+				}, {
+					"nome": "Sistema de Gerenciamento de Conteúdos",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "João Augusto da Silva Bueno"
+				}, {
+					"nome": "Web Design",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Leonardo Bravo Estacio"
+				}, {
+					"nome": "Administração e Suporte de Sistemas",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Carlos Andres Ferrero"
+				}, {
+					"nome": "Análise e Projeto de Sistemas",
+					"fase": 3,
+					"carga_horaria": 80,
+					"professor": "João Augusto da Silva Bueno"
+				}, {
+					"nome": "Desenvolvimento de Sistemas Web II",
+					"fase": 3,
+					"carga_horaria": 120,
+					"professor": "Leonardo Bravo Estacio"
+				}, {
+					"nome": "Gestão e Ética em TI",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "João Augusto da Silva Bueno"
+				}, {
+					"nome": "Inglês Aplicado",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Paula Clarice Santos G. de Jesus"
+				}, {
+					"nome": "Desenvolvimento para Dispositivos Móveis",
+					"fase": 4,
+					"carga_horaria": 120,
+					"professor": "Fernando Weber Albiero"
+				}, {
+					"nome": "Empreendedorismo",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Samuel Ferreira de Melo"
+				}, {
+					"nome": "Teste de Software",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Alexandre Perin de Souza"
+				}, {
+					"nome": "Tópicos em Programação",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Fabio Aiub Sperotto"
+				}
+			]
+		}, {
+			"nome": "Técnico em Mecatrônica (Vespertino – aula de 3a a 6a)",
+			"turno": "Vespertino",
+			"dia_inicio": "Terça",
+			"dia_fim": "Sexta",
+			"disciplinas": [
+				{
+					"nome": "Cálculo Técnico",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Juliana Mercedes Rheinheimer"
+				}, {
+					"nome": "Desenho Técnico",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "Julio Azambuja da Silveira"
+				}, {
+					"nome": "Eletricidade",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Thiago Henrique Mombach"
+				}, {
+					"nome": "Informática",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "João Augusto da Silva Bueno"
+				}, {
+					"nome": "Linguagem e Comunicação",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "Paula Clarice Santos G. de Jesus"
+				}, {
+					"nome": "Metrologia",
+					"fase": 1,
+					"carga_horaria": 40,
+					"professor": "Ricardo Teran Muhl"
+				}, {
+					"nome": "Circuitos Elétricos",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Thiago Henrique Mombach"
+				}, {
+					"nome": "Desenho CAD",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Anderson Luis Garcia Correia"
+				}, {
+					"nome": "Elementos de Máquinas",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Rafael Gustavo Schreiber"
+				}, {
+					"nome": "Eletrônica",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Jeferson Fraytag"
+				}, {
+					"nome": "Processos de Fabricação Mecânica",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Ricardo Teran Muhl"
+				}, {
+					"nome": "Tecnologia de Materiais I",
+					"fase": 2,
+					"carga_horaria": 40,
+					"professor": "Cláudio Marques Schaeffer"
+				}, {
+					"nome": "CNC",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Ariton Araldi"
+				}, {
+					"nome": "Eletrônica Industrial",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Jeferson Fraytag"
+				}, {
+					"nome": "Hidráulica e Pneumática I",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Cláudio Marques Schaeffer"
+				}, {
+					"nome": "Instrumentação",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Gabriel Granzotto Madruga"
+				}, {
+					"nome": "Linguagem de Programação",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Carlos Andres Ferrero"
+				}, {
+					"nome": "Motores Elétricos e Acionamentos Eletrônicos",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Cláudio Marques Schaeffer"
+				}, {
+					"nome": "Microcontroladores",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Rogério da Silva"
+				}, {
+					"nome": "Projeto Integrador I",
+					"fase": 3,
+					"carga_horaria": 40,
+					"professor": "Cláudio Marques Schaeffer"
+				}, {
+					"nome": "Controle e Automação",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Diego Augusto Gonzaga"
+				}, {
+					"nome": "Empreendedorismo",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Joelma Kremer"
+				}, {
+					"nome": "Hidráulica e Pneumática II",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Diego Augusto Gonzaga"
+				}, {
+					"nome": "Projeto Integrador II",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Douglas Carvalho Morais"
+				}, {
+					"nome": "Redes Industriais e Supervisório",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Rogério da Silva"
+				}, {
+					"nome": "Robótica",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Rogério da Silva"
+				}
+			]
+		}, {
+			"nome": "Técnico em Administração (Vespertino – aula de 3a a 6a)",
+			"turno": "Vespertino",
+			"dia_inicio": "Terça",
+			"dia_fim": "Sexta",
+			"disciplinas": [
+				{
+					"nome": "Fundamentos da Administração",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Larisse Kupski"
+				}, {
+					"nome": "Informática Básica",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Carlos Andres Ferrero"
+				}, {
+					"nome": "Matemática Aplicada à Administração",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Juliana Mercedes Rheinheimer"
+				}, {
+					"nome": "Português",
+					"fase": 1,
+					"carga_horaria": 80,
+					"professor": "Paula Clarice Santos G. de Jesus"
+				}, {
+					"nome": "Administração de Marketing",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Thiago Meneghel Rodrigues"
+				}, {
+					"nome": "Administração de Pessoas",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Samuel Ferreira de Melo"
+				}, {
+					"nome": "Economia Solidária, Associativismo e Cooperativismo",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Joelma Kremer"
+				}, {
+					"nome": "Matemática e Rotinas Financeiras",
+					"fase": 2,
+					"carga_horaria": 80,
+					"professor": "Marisa Santos Sanson"
+				}, {
+					"nome": "Administração de Materiais",
+					"fase": 3,
+					"carga_horaria": 80,
+					"professor": "Samuel Ferreira de Melo"
+				}, {
+					"nome": "Administração de Produção",
+					"fase": 3,
+					"carga_horaria": 80,
+					"professor": "Larisse Kupski"
+				}, {
+					"nome": "Gestão de Turismo e Meio Ambiente",
+					"fase": 3,
+					"carga_horaria": 80,
+					"professor": "Thiago Meneghel Rodrigues"
+				}, {
+					"nome": "Redação Oficial",
+					"fase": 3,
+					"carga_horaria": 80,
+					"professor": "Paula Clarice Santos G. de Jesus"
+				}, {
+					"nome": "Administração Pública",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Thiago Meneghel Rodrigues"
+				}, {
+					"nome": "Empreendedorismo",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Marisa Santos Sanson"
+				}, {
+					"nome": "Projeto Integrador",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Larisse Kupski"
+				}, {
+					"nome": "Responsabilidade Socioambiental",
+					"fase": 4,
+					"carga_horaria": 80,
+					"professor": "Joelma Kremer"
+				}, {
+					"nome": "Sistemas de Informação",
+					"fase": 4,
+					"carga_horaria": 40,
+					"professor": "Fabio Aiub Sperotto"
+				}
+			]
+		}
+	]
+}

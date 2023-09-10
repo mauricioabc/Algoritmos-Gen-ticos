@@ -1,0 +1,27 @@
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de byte compilado Python
+__pycache__/
+*.pyc
+
+# Diretório de ambiente virtual (se você usar venv ou virtualenv)
+venv/
+env/
+
+# Arquivos de log
+*.log
+
+# Arquivos de cache do PyCharm
+idea/
+.idea/
+
+# Diretório de build
+build/
+
+# Arquivos gerados pelos testes
+__pytest_cache__/
+
+# Dependências e pacotes instalados
+requirements.txt

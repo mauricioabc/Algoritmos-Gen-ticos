@@ -1,0 +1,356 @@
+{
+  "professores": [
+    {
+      "nome": "Ailton Durigon",
+      "segunda": "N",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Alexandre Perin de Souza",
+      "segunda": "S",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Anderson Luis Garcia Correia",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Ariton Araldi",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "N",
+      "sexta": "S"
+    },
+    {
+      "nome": "Carlos Andres Ferrero",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "N"
+    },
+    {
+      "nome": "Carolina Berger",
+      "segunda": "N",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Cláudio Marques Schaeffer",
+      "segunda": "N",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Diego Augusto Gonzaga",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Diego Bittencourt Machado",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Douglas Carvalho Morais",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "N"
+    },
+    {
+      "nome": "Eder Corvalão",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "N",
+      "sexta": "N"
+    },
+    {
+      "nome": "Eliana Fernandes Borragini",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "N",
+      "sexta": "S"
+    },
+    {
+      "nome": "Fabio Aiub Sperotto",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "N"
+    },
+    {
+      "nome": "Fernando da Silva Osório",
+      "segunda": "S",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Fernando Weber Albiero",
+      "segunda": "S",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Gabriel Granzotto Madruga",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "N",
+      "sexta": "S"
+    },
+    {
+      "nome": "Geovani Raulino",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "N",
+      "sexta": "S"
+    },
+    {
+      "nome": "Gustavo Henrique S. Flores Ponce",
+      "segunda": "N",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Haroldo Gregório de Oliveira",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "N"
+    },
+    {
+      "nome": "Jaqueline Suave",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Jeferson Fraytag",
+      "segunda": "N",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "João Augusto da Silva Bueno",
+      "segunda": "N",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Joelma Kremer",
+      "segunda": "S",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Juliana Mercedes Rheinheimer",
+      "segunda": "S",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Julio Azambuja da Silveira",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "N",
+      "sexta": "S"
+    },
+    {
+      "nome": "Larisse Kupski",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Leonardo Bravo Estacio",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Marco Aurélio Woehl",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "N"
+    },
+    {
+      "nome": "Marisa Santos Sanson",
+      "segunda": "N",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Matheus Fontanelle Pereira",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Michael Ramos Nunes",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Natalia Madalena Boelter",
+      "segunda": "S",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Paula Clarice Santos G. de Jesus",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Rafael Gustavo Schreiber",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "N",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Ricardo Teran Muhl",
+      "segunda": "N",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Robson Costa",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Rogério da Silva",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "N"
+    },
+    {
+      "nome": "Samuel Ferreira de Melo",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "N",
+      "sexta": "S"
+    },
+    {
+      "nome": "Taiana Maria Deboni",
+      "segunda": "N",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Thiago Henrique Mombach",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "N",
+      "sexta": "S"
+    },
+    {
+      "nome": "Thiago Meneghel Rodrigues",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Vilma Gisele Karsburg",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Vilson Heck Junior",
+      "segunda": "N",
+      "terca": "N",
+      "quarta": "S",
+      "quinta": "S",
+      "sexta": "S"
+    },
+    {
+      "nome": "Wilson Castello Branco Neto",
+      "segunda": "S",
+      "terca": "S",
+      "quarta": "S",
+      "quinta": "N",
+      "sexta": "S"
+    }
+  ]
+}
