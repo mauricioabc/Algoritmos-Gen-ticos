@@ -1,9 +1,8 @@
 import unittest
 from Infraestructure.Parser import Parser
-from Infraestructure.Logger import Logger
 
 
-class TestCurso(unittest.TestCase):
+class TestParser(unittest.TestCase):
 
     def setUp(self):
         self.parser = Parser()

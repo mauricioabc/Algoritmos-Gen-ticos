@@ -2,7 +2,11 @@ from typing import Any
 
 
 class Disciplina:
+    next_id = 1
+
     def __init__(self, nome, fase, carga_horaria, professor):
+        self.id = Disciplina.next_id
+        Disciplina.next_id += 1
         self.nome = nome
         self.fase = fase
         self.carga_horaria = carga_horaria
