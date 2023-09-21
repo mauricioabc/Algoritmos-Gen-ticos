@@ -17,6 +17,12 @@ class Curso:
             nova_disciplina = Disciplina(nome, fase, carga_horaria, professor)
             self.lista_disciplinas.append(nova_disciplina)
 
+    def getNumeroDias(self):
+        if self.dia_inicio=='Segunda':
+            return 5
+        elif self.dia_inicio=='Terça':
+            return 4
+
     def __setattr__(self, name: str, value: Any) -> None:
         super().__setattr__(name, value)
 

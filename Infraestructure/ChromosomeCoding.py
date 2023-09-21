@@ -31,9 +31,9 @@ class ChromosomeCoding:
             lista_fases = sorted(list(lista_fases))
             cromossomos = []
             cromossomo = []
-            quantidade_dias = 5
+            quantidade_dias = curso.getNumeroDias()
             quantidade_aulas = 2
-            tamanho_max_cromossomo = quantidade_dias * quantidade_dias * quantidade_aulas
+            tamanho_max_cromossomo = len(lista_fases) * quantidade_dias * quantidade_aulas
             tamanho_cromossomo = quantidade_dias * 2
             for i in range(tamanho_populacao):
                 for fase in lista_fases:

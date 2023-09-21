@@ -14,10 +14,19 @@ class Parser:
         try:
             lista_cursos = self.process_cursos()
             lista_disponibilidade = self.process_disponibilidade()
+            lista_disciplinas = self.process_disciplinas(lista_cursos)
             self.logger.info('Processamento dos arquivos de configuração concluído com sucesso.')
-            return lista_cursos, lista_disponibilidade
+            return lista_cursos, lista_disponibilidade, lista_disciplinas
         except Exception as e:
             self.logger.error('Ocorreu um erro inesperado: ' + str(e))
+
+    def process_disciplinas(self, lista_cursos):
+        lista_todas_disciplinas = []
+        for curso in lista_cursos:
+            disciplinas = curso.lista_disciplinas
+            for disciplina in disciplinas:
+                lista_todas_disciplinas.append(disciplina)
+        return lista_todas_disciplinas
 
     def process_cursos(self):
         self.logger.info('Processando o arquivo de cursos e disciplinas.')
