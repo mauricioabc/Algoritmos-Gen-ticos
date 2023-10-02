@@ -1,5 +1,6 @@
 from Infraestructure.Logger import Logger
 from Infraestructure.RandomNumber import RandomNumber
+from Entities.Cromossome import Cromossome
 
 
 class ChromosomeCoding:
@@ -30,7 +31,7 @@ class ChromosomeCoding:
                 lista_fases.add(fase)
             lista_fases = sorted(list(lista_fases))
             cromossomos = []
-            cromossomo = []
+            cromossomo = Cromossome()
             quantidade_dias = curso.getNumeroDias()
             quantidade_aulas = 2
             tamanho_max_cromossomo = len(lista_fases) * quantidade_dias * quantidade_aulas
@@ -41,11 +42,11 @@ class ChromosomeCoding:
                     inicio, fim = self.range_id_disciplinas(disciplinas_organizadas)
                     for k in range(tamanho_cromossomo):
                         valor = self.random.random_number_generator(inicio, fim)
-                        if len(cromossomo) == tamanho_max_cromossomo:
+                        if len(cromossomo.cromossome) == tamanho_max_cromossomo:
                             cromossomos.append(cromossomo)
-                            cromossomo = []
+                            cromossomo = Cromossome()
                         else:
-                            cromossomo.append(valor)
+                            cromossomo.cromossome.append(valor)
             self.logger.info('Criação de cromossomos concluída com sucesso para o curso: ' + curso.nome)
             return cromossomos
         except Exception as e:
