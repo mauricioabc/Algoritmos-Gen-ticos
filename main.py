@@ -4,6 +4,7 @@ from Infraestructure.Parser import Parser
 from Infraestructure.ChromosomeCoding import ChromosomeCoding
 from Infraestructure.ChromosomeRating import ChromosomeRating
 from Infraestructure.CrossingOver import CrossingOver
+from Infraestructure.ChromosomeHistory import ChromosomeHistory
 
 
 def main():
@@ -17,22 +18,28 @@ def main():
     chromesome_creation = ChromosomeCoding(10)
     lista_cromossomos = chromesome_creation.process_initial_chromosomes(lista_cursos)
 
-    # Faz a avaliação dos cromossomos criados de conforme os critérios
+    # Cria objetos
     chromesome_rating = ChromosomeRating()
-
-    # Critério: Integralizar a carga horária corretamente (-10 para cada aula faltante)
-    lista_cromossomos = chromesome_rating.av_carga_horaria(lista_cromossomos, lista_cursos)
-
-    # Critério: Não ter choque de horário do professor (-5 a cada choque)
-    lista_cromossomos = chromesome_rating.av_choque_horario(lista_cromossomos, lista_todas_disciplinas, lista_cursos)
-
-    # Critério: Professor indisponível (-3 a cada indisponibilidade)
-    lista_cromossomos = chromesome_rating.av_disponibilidade(lista_cromossomos, lista_disponibilidade, lista_todas_disciplinas, lista_cursos)
-
-    # Faz a frequência e o cruzamento
+    chromosome_history = ChromosomeHistory()
     chromesome_crossing_over = CrossingOver()
-    lista_cromossomos = chromesome_crossing_over.calculates_accumulated_frequency(lista_cromossomos, lista_cursos)
-    lista_cromossomos = chromesome_crossing_over.crossing(lista_cromossomos, lista_cursos, 8, 2)
+
+    status = False
+    while not status:
+        # Faz a avaliação dos cromossomos criados de conforme os critérios
+        # Critério: Integralizar a carga horária corretamente (-10 para cada aula faltante)
+        lista_cromossomos = chromesome_rating.av_carga_horaria(lista_cromossomos, lista_cursos)
+
+        # Critério: Não ter choque de horário do professor (-5 a cada choque)
+        lista_cromossomos = chromesome_rating.av_choque_horario(lista_cromossomos, lista_todas_disciplinas, lista_cursos)
+
+        # Critério: Professor indisponível (-3 a cada indisponibilidade)
+        lista_cromossomos = chromesome_rating.av_disponibilidade(lista_cromossomos, lista_disponibilidade, lista_todas_disciplinas, lista_cursos)
+
+        # Salva melhores notas
+        status = chromosome_history.save_best_chromosomes(lista_cromossomos, lista_cursos, 100)
+
+        # Faz a frequência e o cruzamento
+        lista_cromossomos = chromesome_crossing_over.crossing(lista_cromossomos, lista_cursos, 8, 2, 0.01)
 
     end_time = time.time()
 

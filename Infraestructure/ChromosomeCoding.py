@@ -1,6 +1,6 @@
 from Infraestructure.Logger import Logger
 from Infraestructure.RandomNumber import RandomNumber
-from Entities.Cromossome import Cromossome
+from Entities.Chromosome import Cromossome
 
 
 class ChromosomeCoding:
@@ -41,7 +41,7 @@ class ChromosomeCoding:
                     disciplinas_organizadas = self.disciplinas_por_fase(lista_disciplinas, fase)
                     inicio, fim = self.range_id_disciplinas(disciplinas_organizadas)
                     for k in range(tamanho_cromossomo):
-                        valor = self.random.random_number_generator(inicio, fim)
+                        valor = self.random.int_generator(inicio, fim)
                         if len(cromossomo.cromossome) == tamanho_max_cromossomo:
                             cromossomos.append(cromossomo)
                             cromossomo = Cromossome()
