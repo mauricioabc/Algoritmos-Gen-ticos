@@ -5,8 +5,9 @@ from Infraestructure.RandomNumber import RandomNumber
 
 class CrossingOver:
 
-    def __init__(self):
+    def __init__(self, lista_disciplinas):
         self.logger = Logger(self.__class__.__name__)
+        self.lista_disciplinas = lista_disciplinas
         self.random = RandomNumber()
 
     def calculates_accumulated_frequency(self, chromossome_list, course_list):
@@ -112,5 +113,30 @@ class CrossingOver:
         self.logger.info('Ocorreu uma mutação.')
         # Lógica específica de mutação, modifica aleatoriamente alguns genes do cromossomo
         gene_index = self.random.int_generator(0, len(cromossome.cromossome) - 1)
-        novo_valor = self.random.int_generator(0, 1)  # Modifique isso com base na natureza dos seus genes
+        old_gene = cromossome.cromossome[gene_index]
+        inicio, fim = self.get_new_gene_range(old_gene)
+        novo_valor = self.random.int_generator(inicio, fim)
         cromossome.cromossome[gene_index] = novo_valor
+
+    def get_new_gene_range(self, gene_value):
+        fase_disciplina = self.get_fase_by_disciplina_id(gene_value)
+        fase_disciplinas = self.disciplinas_por_fase(fase_disciplina)
+        return self.range_id_disciplinas(fase_disciplinas)
+
+    def get_fase_by_disciplina_id(self, id_disciplina):
+        for disciplina in self.lista_disciplinas:
+            if disciplina.id == id_disciplina:
+                return disciplina.fase
+        return None
+
+    def disciplinas_por_fase(self, fase):
+        disciplinas_organizadas = []
+        for disciplina in self.lista_disciplinas:
+            if disciplina.fase == fase:
+                disciplinas_organizadas.append(disciplina)
+        return disciplinas_organizadas
+
+    def range_id_disciplinas(self, lista_disciplinas):
+        inicio = lista_disciplinas[0].id
+        fim = lista_disciplinas[len(lista_disciplinas) - 1].id
+        return inicio, fim

@@ -21,7 +21,7 @@ def main():
     # Cria objetos
     chromesome_rating = ChromosomeRating()
     chromosome_history = ChromosomeHistory()
-    chromesome_crossing_over = CrossingOver()
+    chromesome_crossing_over = CrossingOver(lista_todas_disciplinas)
 
     status = False
     while not status:
