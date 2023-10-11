@@ -3,6 +3,8 @@ from datetime import datetime, timedelta
 from Infraestructure.Parser import Parser
 from Infraestructure.ChromosomeCoding import ChromosomeCoding
 from Infraestructure.ChromosomeRating import ChromosomeRating
+from Infraestructure.CrossingOver import CrossingOver
+
 
 def main():
     start_time = time.time()
@@ -26,6 +28,11 @@ def main():
 
     # Critério: Professor indisponível (-3 a cada indisponibilidade)
     lista_cromossomos = chromesome_rating.av_disponibilidade(lista_cromossomos, lista_disponibilidade, lista_todas_disciplinas, lista_cursos)
+
+    # Faz a frequência e o cruzamento
+    chromesome_crossing_over = CrossingOver()
+    lista_cromossomos = chromesome_crossing_over.calculates_accumulated_frequency(lista_cromossomos, lista_cursos)
+    lista_cromossomos = chromesome_crossing_over.crossing(lista_cromossomos, lista_cursos, 8, 2)
 
     end_time = time.time()
 
