@@ -14,7 +14,7 @@ class ChromosomeRating:
             for j, cromossomo in enumerate(cromossomos):
                 desconto = 0
                 cromossome_list = cromossomo.cromossome
-                self.logger.info('Verificando o cromossomo {}'.format(j + 1))
+                # self.logger.info('Verificando o cromossomo {}'.format(j + 1))
                 disciplinas = lista_cursos[i].lista_disciplinas
                 for disciplina in disciplinas:
                     id = disciplina.id
@@ -35,7 +35,7 @@ class ChromosomeRating:
             for j, cromossomo in enumerate(cromossomos):
                 choques = 0
                 cromossome_list = cromossomo.cromossome
-                self.logger.info('Verificando o cromossomo {}'.format(j + 1))
+                # self.logger.info('Verificando o cromossomo {}'.format(j + 1))
 
                 for k, position in enumerate(cromossome_list):
                     cromossome_professor = self.get_professor_by_id(lista_disciplinas, position)
@@ -62,7 +62,7 @@ class ChromosomeRating:
             for j, cromossomo in enumerate(cromossomos):
                 indisponibilidade = 0
                 cromossome_list = cromossomo.cromossome
-                self.logger.info('Verificando o cromossomo {}'.format(j + 1))
+                # self.logger.info('Verificando o cromossomo {}'.format(j + 1))
 
                 for k, position in enumerate(cromossome_list):
                     cromossome_professor = self.get_professor_by_id(lista_disciplinas, position)
