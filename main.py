@@ -5,6 +5,7 @@ from Infraestructure.ChromosomeCoding import ChromosomeCoding
 from Infraestructure.ChromosomeRating import ChromosomeRating
 from Infraestructure.CrossingOver import CrossingOver
 from Infraestructure.ChromosomeHistory import ChromosomeHistory
+from Distribution.DistributionConnector import DistributionConnector
 
 
 def main():
@@ -25,15 +26,16 @@ def main():
 
     status = False
     while not status:
+        connector = DistributionConnector(lista_cursos, lista_todas_disciplinas, lista_disponibilidade, lista_cromossomos)
         # Faz a avaliação dos cromossomos criados de conforme os critérios
         # Critério: Integralizar a carga horária corretamente (-10 para cada aula faltante)
-        lista_cromossomos = chromesome_rating.av_carga_horaria(lista_cromossomos, lista_cursos)
+        lista_cromossomos = connector.process_av_carga_horaria(lista_cromossomos)
 
         # Critério: Não ter choque de horário do professor (-5 a cada choque)
-        lista_cromossomos = chromesome_rating.av_choque_horario(lista_cromossomos, lista_todas_disciplinas, lista_cursos)
+        lista_cromossomos = connector.process_av_choque_horario(lista_cromossomos)
 
         # Critério: Professor indisponível (-3 a cada indisponibilidade)
-        lista_cromossomos = chromesome_rating.av_disponibilidade(lista_cromossomos, lista_disponibilidade, lista_todas_disciplinas, lista_cursos)
+        lista_cromossomos = connector.process_av_disponibilidade(lista_cromossomos)
 
         # Salva melhores notas
         status = chromosome_history.save_best_chromosomes(lista_cromossomos, lista_cursos, 100)

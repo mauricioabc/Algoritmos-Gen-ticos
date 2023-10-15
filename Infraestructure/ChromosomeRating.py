@@ -10,7 +10,7 @@ class ChromosomeRating:
         self.logger.info('Iniciando a avaliação da lista de cromossomos pela carga horária dos cursos.')
         for i in range(len(lista_cromossomos)):
             cromossomos = lista_cromossomos[i]
-            self.logger.info('Verificando os cromossomos do curso: ' + lista_cursos[i].nome)
+            # self.logger.info('Verificando os cromossomos do curso: ' + lista_cursos[i].nome)
             for j, cromossomo in enumerate(cromossomos):
                 desconto = 0
                 cromossome_list = cromossomo.cromossome
@@ -23,42 +23,40 @@ class ChromosomeRating:
                     desconto += abs(qtd_aulas - qtd_ocorrencia)
                 desconto = desconto / 2
                 cromossomo.nota = desconto
-            self.logger.info('Finalizando a verificação dos cromossomos do curso: ' + lista_cursos[i].nome)
+            # self.logger.info('Finalizando a verificação dos cromossomos do curso: ' + lista_cursos[i].nome)
         self.logger.info('Finalizando a avaliação da lista de cromossomos pela carga horária dos cursos.')
         return lista_cromossomos
 
-    def av_choque_horario(self, lista_cromossomos, lista_disciplinas, lista_cursos):
+    def av_choque_horario(self, lista_cromossomos, lista_todos_cromossomos, lista_disciplinas, lista_cursos):
         self.logger.info('Iniciando a avaliação da lista de cromossomos verificando choques de horário.')
-        for i in range(len(lista_cromossomos)):
-            cromossomos = lista_cromossomos[i]
-            self.logger.info('Verificando os cromossomos do curso: ' + lista_cursos[i].nome)
-            for j, cromossomo in enumerate(cromossomos):
-                choques = 0
-                cromossome_list = cromossomo.cromossome
-                # self.logger.info('Verificando o cromossomo {}'.format(j + 1))
 
-                for k, position in enumerate(cromossome_list):
-                    cromossome_professor = self.get_professor_by_id(lista_disciplinas, position)
-                    for m in range(len(lista_cromossomos)):
-                        if m != i:  # Evita comparar o mesmo curso
-                            cromossomos_analysis = lista_cromossomos[m]
-                            for n, cromossomo_analysis in enumerate(cromossomos_analysis):
-                                cromossomo_analysis_list = cromossomo_analysis.cromossome
-                                if len(cromossomo_analysis_list) > k and len(cromossome_list) > k:
-                                    nome_comparacao = self.get_professor_by_id(lista_disciplinas, cromossomo_analysis_list[k])
-                                    if cromossome_professor == nome_comparacao:
-                                        choques += 1
+        # Criar conjunto de horários ocupados para cada curso
+        horarios_ocupados_por_curso = [set() for _ in range(len(lista_cursos))]
+
+        # Preencher conjuntos com horários ocupados
+        for i, cromossomos in enumerate(lista_todos_cromossomos):
+            for cromossomo in cromossomos:
+                for position in cromossomo.cromossome:
+                    professor = self.get_professor_by_id(lista_disciplinas, position)
+                    horarios_ocupados_por_curso[i].add(professor)
+
+        # Verificar choques de horário
+        for i, cromossomos in enumerate(lista_cromossomos):
+            for cromossomo in cromossomos:
+                choques = sum(1 for position in cromossomo.cromossome if any(
+                    professor in horarios_ocupados_por_curso[j] for j in range(len(lista_cursos)) if j != i
+                ))
                 desconto = choques * 5
-                cromossomo.nota = cromossomo.nota + desconto
-            self.logger.info('Finalizando a verificação dos cromossomos do curso: ' + lista_cursos[i].nome)
-            self.logger.info('Finalizando a avaliação da lista de cromossomos verificando choques de horário.')
+                cromossomo.nota += desconto
+
+        self.logger.info('Finalizando a avaliação da lista de cromossomos verificando choques de horário.')
         return lista_cromossomos
 
     def av_disponibilidade(self, lista_cromossomos, lista_disponibilidade, lista_disciplinas, lista_cursos):
         self.logger.info('Iniciando a avaliação da lista de cromossomos verificando a disponibilidade dos professores')
         for i in range(len(lista_cromossomos)):
             cromossomos = lista_cromossomos[i]
-            self.logger.info('Verificando os cromossomos do curso: ' + lista_cursos[i].nome)
+            # self.logger.info('Verificando os cromossomos do curso: ' + lista_cursos[i].nome)
             for j, cromossomo in enumerate(cromossomos):
                 indisponibilidade = 0
                 cromossome_list = cromossomo.cromossome
@@ -73,7 +71,7 @@ class ChromosomeRating:
 
                 desconto = indisponibilidade * 3
                 cromossomo.nota = cromossomo.nota + desconto
-            self.logger.info('Finalizando a verificação dos cromossomos do curso: ' + lista_cursos[i].nome)
+            # self.logger.info('Finalizando a verificação dos cromossomos do curso: ' + lista_cursos[i].nome)
         self.logger.info('Finalizando a avaliação da lista de cromossomos verificando disponibilidade dos professores')
         return lista_cromossomos
 
