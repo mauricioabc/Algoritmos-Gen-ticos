@@ -12,8 +12,9 @@ class TestChromosomeCoding(unittest.TestCase):
         self.lista_disponibilidade = None
 
     def test_process_chromosome_generator(self):
-        self.lista_cursos, self.lista_disponibilidade = self.parser.process_configs()
+        self.lista_cursos, self.lista_disponibilidade, lista_disciplinas = self.parser.process_configs()
         cromossomos = self.chromesome.process_initial_chromosomes(self.lista_cursos)
+        print('Teste')
 
     def test_preenchimento_dos_cromossomos_2_fase_CC(self):
         self.lista_cursos, self.lista_disponibilidade = self.parser.process_configs()
