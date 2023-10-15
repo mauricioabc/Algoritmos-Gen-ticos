@@ -27,18 +27,18 @@ def main():
     is_distributed = True
     while not status:
         # Faz a avaliação dos cromossomos criados de conforme os critérios
+        # Critério: Integralizar a carga horária corretamente (-10 para cada aula faltante)
+        # Critério: Não ter choque de horário do professor (-5 a cada choque)
+        # Critério: Professor indisponível (-3 a cada indisponibilidade)
         if not is_distributed:
-            # Critério: Integralizar a carga horária corretamente (-10 para cada aula faltante)
             lista_cromossomos = chromesome_rating.av_carga_horaria(lista_cromossomos, lista_cursos)
-
-            # Critério: Não ter choque de horário do professor (-5 a cada choque)
             lista_cromossomos = chromesome_rating.av_choque_horario(lista_cromossomos, lista_todas_disciplinas, lista_cursos)
-
-            # Critério: Professor indisponível (-3 a cada indisponibilidade)
             lista_cromossomos = chromesome_rating.av_disponibilidade(lista_cromossomos, lista_disponibilidade, lista_todas_disciplinas, lista_cursos)
         else:
-            connector = DistributionConnector(lista_cursos, lista_todas_disciplinas, lista_disponibilidade)
-            connector.process_av_carga_horaria(lista_cromossomos)
+            connector = DistributionConnector(lista_cursos, lista_todas_disciplinas, lista_disponibilidade, lista_cromossomos)
+            lista_cromossomos = connector.process_av_carga_horaria(lista_cromossomos)
+            lista_cromossomos = connector.process_av_choque_horario(lista_cromossomos)
+            lista_cromossomos = connector.process_av_disponibilidade(lista_cromossomos)
 
         # Salva melhores notas
         status = chromosome_history.save_best_chromosomes(lista_cromossomos, lista_cursos, 100)

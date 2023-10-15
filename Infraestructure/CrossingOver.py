@@ -17,13 +17,13 @@ class CrossingOver:
             self.logger.info('Ordenando e calculando os cromossomos do curso: ' + course_list[i].nome)
 
             # Ordenar os cromossomos pelo atributo nota em ordem decrescente
-            ordered_chromosomes = sorted(chromossomes, key=lambda x: x.nota, reverse=True)
+            ordered_chromosomes = sorted(chromossomes, key=lambda x: x['nota'], reverse=True)
 
             # Calcular a frequência acumulada
             cumulative_frequency = 0
             for chromossome in ordered_chromosomes:
-                cumulative_frequency += chromossome.nota
-                chromossome.frequencia_acumulada = cumulative_frequency
+                cumulative_frequency += chromossome['nota']
+                chromossome['frequencia_acumulada'] = cumulative_frequency
             chromossome_list[i] = ordered_chromosomes
             self.logger.info('Finalizando o cálculo dos cromossomos do curso: ' + course_list[i].nome)
         self.logger.info('Finalizando o cálculo da frequência acumulada dos cromossomos.')
@@ -47,7 +47,7 @@ class CrossingOver:
             self.random.random_shuffle(chromosomes_for_crossover)
 
             # Aplicar elitismo para selecionar os melhores cromossomos
-            best_chromosomes = sorted(chromossomes, key=lambda x: x.nota)[:elitism_limit]
+            best_chromosomes = sorted(chromossomes, key=lambda x: x['nota'])[:elitism_limit]
 
             # Cruzamento
             nova_geracao = self.realiza_cruzamento(chromosomes_for_crossover)
@@ -65,13 +65,13 @@ class CrossingOver:
         return new_generation
 
     def select_chromosomes_based_on_frequency(self, chromossomes, crossing_limit):
-        total_frequency = chromossomes[-1].frequencia_acumulada  # Último cromossomo tem a frequência acumulada total
+        total_frequency = chromossomes[-1]['frequencia_acumulada']  # Último cromossomo tem a frequência acumulada total
         selected_chromosomes = []
 
         for _ in range(crossing_limit):
             random_frequency = self.random.uniform_generator(0, total_frequency)
             selected_chromosomes.append(
-                next(ch for ch in chromossomes if ch.frequencia_acumulada >= random_frequency)
+                next(ch for ch in chromossomes if ch['frequencia_acumulada'] >= random_frequency)
             )
 
         return selected_chromosomes
@@ -93,13 +93,13 @@ class CrossingOver:
 
     def crossover(self, pai1, pai2):
         # Lógica do ponto de corte
-        ponto_de_corte = self.random.int_generator(1, len(pai1.cromossome) - 1)
+        ponto_de_corte = self.random.int_generator(1, len(pai1['cromossome']) - 1)
 
         # Criar filhos combinando partes dos pais
         filho1 = Cromossome()
-        filho1.cromossome = pai1.cromossome[:ponto_de_corte] + pai2.cromossome[ponto_de_corte:]
+        filho1.cromossome = pai1['cromossome'][:ponto_de_corte] + pai2['cromossome'][ponto_de_corte:]
         filho2 = Cromossome()
-        filho2.cromossome = pai2.cromossome[:ponto_de_corte] + pai1.cromossome[ponto_de_corte:]
+        filho2.cromossome = pai2['cromossome'][:ponto_de_corte] + pai1['cromossome'][ponto_de_corte:]
 
         return filho1, filho2
 

@@ -18,6 +18,7 @@ class TestDistribution(unittest.TestCase):
         cromossomos = self.chromesome.process_initial_chromosomes(self.lista_cursos)
         connector = DistributionConnector(self.lista_cursos, self.lista_todas_disciplinas, self.lista_disponibilidade)
         resultado = connector.process_av_carga_horaria(cromossomos)
+        print(len(resultado[2]))
         print('Teste')
 
 
