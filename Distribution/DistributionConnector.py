@@ -16,21 +16,38 @@ class DistributionConnector:
         results = []
         try:
             self.logger.info(f'Running RPC client, process number: {process_number}')
-            client = xmlrpc.client.ServerProxy("http://localhost:8000")
+            client1 = xmlrpc.client.ServerProxy("http://10.151.34.129:8000")
+            client2 = xmlrpc.client.ServerProxy("http://10.151.34.172:8000")
+            client3 = xmlrpc.client.ServerProxy("http://10.151.34.118:8000")
             if process_code == 0:
                 converted_chunk = [chunks]
                 local_lista_cursos = self.lista_cursos
-                resultado = client.av_carga_horaria(converted_chunk, local_lista_cursos)
+                if process_number == 0 or process_number==1:
+                    resultado = client1.av_carga_horaria(converted_chunk, local_lista_cursos)
+                if process_number == 2 or process_number==3:
+                    resultado = client2.av_carga_horaria(converted_chunk, local_lista_cursos)
+                if process_number == 4 or process_number==5:
+                    resultado = client3.av_carga_horaria(converted_chunk, local_lista_cursos)
                 results.extend(resultado)
             elif process_code == 1:
                 converted_chunk = [chunks]
                 local_lista_cursos = self.lista_cursos
-                resultado = client.av_choque_horario(converted_chunk, self.lista_todos_os_cromossomos, self.lista_todas_disciplinas, local_lista_cursos)
+                if process_number == 0 or process_number==1:
+                    resultado = client1.av_choque_horario(converted_chunk, self.lista_todos_os_cromossomos, self.lista_todas_disciplinas, local_lista_cursos)
+                if process_number == 2 or process_number==3:
+                    resultado = client2.av_choque_horario(converted_chunk, self.lista_todos_os_cromossomos, self.lista_todas_disciplinas, local_lista_cursos)
+                if process_number == 4 or process_number==5:
+                    resultado = client3.av_choque_horario(converted_chunk, self.lista_todos_os_cromossomos, self.lista_todas_disciplinas, local_lista_cursos)
                 results.append(resultado)
             elif process_code == 2:
                 converted_chunk = [chunks]
                 local_lista_cursos = self.lista_cursos
-                resultado = client.av_disponibilidade(converted_chunk, self.lista_disponibilidade, self.lista_todas_disciplinas, local_lista_cursos)
+                if process_number == 0 or process_number==1:
+                    resultado = client1.av_disponibilidade(converted_chunk, self.lista_disponibilidade, self.lista_todas_disciplinas, local_lista_cursos)
+                if process_number == 2 or process_number==3:
+                    resultado = client2.av_disponibilidade(converted_chunk, self.lista_disponibilidade, self.lista_todas_disciplinas, local_lista_cursos)
+                if process_number == 4 or process_number==5:
+                    resultado = client3.av_disponibilidade(converted_chunk, self.lista_disponibilidade, self.lista_todas_disciplinas, local_lista_cursos)
                 results.append(resultado)
             return results
         except Exception as e:
